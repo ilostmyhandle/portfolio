@@ -10,29 +10,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#111214; --ink-2:#3c3f45; --mut:#6b6f77; --line:#e7e8ea; --bg:#fbfbfa; --card:#ffffff;
-  --accent:#111214; --chip:#f0f0ee;
+  --ink:#ececee; --ink-2:#b6b8bf; --mut:#8b8e96; --line:#26272c; --bg:#0d0e10; --card:#141519;
+  --accent:#ececee; --chip:#1d1e23;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
 a{color:inherit}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(251,251,250,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(13,14,16,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{font-weight:650;font-size:15px}
+.brand{font-weight:650;font-size:15px;color:var(--ink)}
 .brand small{display:block;font-weight:400;color:var(--mut);font-size:11.5px}
 .topbar nav{display:flex;gap:22px;font-size:13.5px;color:var(--ink-2)}
 .topbar nav a{text-decoration:none}
 .topbar nav a:hover{color:var(--ink)}
-@media(max-width:720px){.topbar nav{display:none}}
+@media(max-width:720px){.topbar nav{gap:14px;font-size:12px}}
 .hero{padding:72px 0 20px}
 .kicker{font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
 h1{font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-.03em;font-weight:750;max-width:18ch}
 .lead{font-size:clamp(17px,2.4vw,21px);color:var(--ink-2);max-width:52ch;margin-top:18px}
 .hero-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-size:14.5px;font-weight:550}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid #cfced2}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--accent);color:#111213;text-decoration:none;font-size:14.5px;font-weight:550}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #3a3b42}
 .btn:hover{opacity:.88}
 .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:52px 0 8px}
 @media(max-width:860px){.metrics{grid-template-columns:repeat(2,1fr)}}
@@ -67,17 +67,17 @@ h2{font-size:clamp(23px,3.4vw,31px);letter-spacing:-.02em;font-weight:700}
 .shotnote{font-size:13px;color:var(--mut);margin:-18px 0 26px}
 .receipts{display:grid;gap:26px}
 .receipt{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.receipt figure{margin:0;background:#f4f4f2}
+.receipt figure{margin:0;background:#0a0b0c}
 .receipt img{display:block;width:100%;height:auto}
 .receipt .cap{padding:20px 24px}
 .receipt .cap h4{font-size:16.5px;font-weight:650}
 .receipt .cap p{font-size:14.5px;color:var(--ink-2);margin-top:6px;max-width:75ch}
 .car{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;scrollbar-width:thin}
-.dcard{flex:0 0 min(420px,86vw);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none}
-.dcard figure{margin:0;background:#f4f4f2;display:flex;align-items:center;justify-content:center}
+.dcard{flex:0 0 min(400px,86vw);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none}
+.dcard figure{margin:0;background:#0a0b0c;display:flex;align-items:center;justify-content:center}
 .dcard img{width:100%;height:auto;display:block}
 .dcard .cap{padding:18px 20px}
-.dcard .cap h4{font-size:15.5px;font-weight:650;text-decoration:underline;text-decoration-color:#cfced2;text-underline-offset:3px}
+.dcard .cap h4{font-size:15.5px;font-weight:650;text-decoration:underline;text-decoration-color:#4a4b52;text-underline-offset:3px}
 .dcard .cap p{font-size:13.5px;color:var(--ink-2);margin-top:5px}
 .build{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
 .chip{display:inline-block;background:var(--chip);border-radius:999px;padding:5px 12px;font-family:"Geist Mono",monospace;font-size:11.5px;letter-spacing:.08em;margin-bottom:14px}
@@ -85,11 +85,11 @@ h2{font-size:clamp(23px,3.4vw,31px);letter-spacing:-.02em;font-weight:700}
 .build p{color:var(--ink-2);font-size:14.5px;margin-top:8px;max-width:75ch}
 .build .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
 @media(max-width:720px){.build .facts{grid-template-columns:1fr}}
-.cta{margin:70px 0 30px;background:var(--accent);color:#fff;border-radius:22px;padding:44px 38px;display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+.cta{margin:70px 0 30px;background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:22px;padding:44px 38px;display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
 .cta h2{font-size:clamp(22px,3vw,30px);max-width:24ch}
-.cta p{color:#c9c9ce;margin-top:10px;max-width:52ch}
-.cta .btn{background:#fff;color:var(--ink)}
-.cta .btn.ghost{background:transparent;color:#fff;border-color:#4a4a52}
+.cta p{color:var(--mut);margin-top:10px;max-width:52ch}
+.cta .btn{background:#ececee;color:#111213}
+.cta .btn.ghost{background:transparent;color:var(--ink);border-color:#3a3b42}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:13px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
 </head>
@@ -214,8 +214,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:13px;color
 
   <section id="design">
     <div class="sec-head"><span class="sec-num">06</span><h2>The design side, straight from Dribbble</h2></div>
-    <p class="sub">I post work as <a href="https://dribbble.com/ilostmyhandle" target="_blank" rel="noreferrer noopener">Wayne Michael on Dribbble</a>, with fuller case studies on <a href="https://behance.net/waynemichael" target="_blank" rel="noreferrer noopener">Behance</a>. Swipe through a few recent shots, each shown in full:</p>
+    <p class="sub">I post work as <a href="https://dribbble.com/ilostmyhandle" target="_blank" rel="noreferrer noopener">Wayne Michael on Dribbble</a>, with fuller case studies on <a href="https://behance.net/waynemichael" target="_blank" rel="noreferrer noopener">Behance</a>. Swipe through a few recent shots, each shown in full, your picks first:</p>
     <div class="car">
+      <a class="dcard" href="https://dribbble.com/shots/23011563-Ying-Yang" target="_blank" rel="noreferrer noopener"><figure><img src="assets/d5.jpg" alt="Ying and Yang, a 3D artwork of two figures reaching for each other under a red sky" loading="lazy"></figure><div class="cap"><h4>Ying &amp; Yang</h4><p>3D artwork of two figures reaching for each other across a red sky, ringed by black and white orbs.</p></div></a>
+      <a class="dcard" href="https://dribbble.com/shots/26622291-Typography-Exploration" target="_blank" rel="noreferrer noopener"><figure><img src="assets/d6.jpg" alt="A Fresh Start, a typography poster in bold yellow type over a landscape" loading="lazy"></figure><div class="cap"><h4>Typography exploration · A Fresh Start</h4><p>Bold yellow type layered over a grainy landscape, part of a numbered typography series.</p></div></a>
+      <a class="dcard" href="https://dribbble.com/shots/26622293-Typography-Exploration" target="_blank" rel="noreferrer noopener"><figure><img src="assets/d7.jpg" alt="Wasted Love, an album-cover style poster with red serif type over a teal portrait" loading="lazy"></figure><div class="cap"><h4>Typography exploration · Wasted Love</h4><p>Album-cover style poster with heavy red serif type over a teal-toned portrait.</p></div></a>
       <a class="dcard" href="https://dribbble.com/shots/26820676-Cover-art-Design" target="_blank" rel="noreferrer noopener"><figure><img src="assets/d1.png" alt="Cover art design, a dark graphic design poster" loading="lazy"></figure><div class="cap"><h4>Cover art design</h4><p>Type-led cover artwork exploring bold colour and scale.</p></div></a>
       <a class="dcard" href="https://dribbble.com/shots/26622339-Logo-wordmark-exploration" target="_blank" rel="noreferrer noopener"><figure><img src="assets/d2.png" alt="Logo wordmark exploration showing type studies on a white background" loading="lazy"></figure><div class="cap"><h4>Logo wordmark exploration</h4><p>Wordmark studies testing weight and letterform cuts for a brand identity.</p></div></a>
       <a class="dcard" href="https://dribbble.com/shots/26622333-Skilltracker-Logo" target="_blank" rel="noreferrer noopener"><figure><img src="assets/d3.png" alt="Skilltracker logo, a branding logo mark" loading="lazy"></figure><div class="cap"><h4>Skilltracker logo</h4><p>Geometric logo mark exploration for the Skilltracker brand.</p></div></a>
